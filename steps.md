@@ -46,3 +46,10 @@ model_traniner-->model_evaluation;
 ```
 
 the output of each component will be stored in **Artifacts** and later send to next component
+
+## coming to components
+
+16. **data_ingestion** me phle configuation wala part banaya jaha pe m data_ingestion ke regarding jo bhi variables honge, unko rakhunga(jaise csv files), you can also make a seperate file for this work
+toh data_ingestion ki starting me maine phle data read kara aur us data ko "arifacts" naam ki dir me csv format me save kr liya and 
+and similarly humne train.csv and test.csv ko bhi load kr liya in "artifacts" folder
+phir humne train and test data ka path return kara diya 
