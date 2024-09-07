@@ -1,0 +1,2 @@
+[2024-09-07 16:17:31,922] 79 src.logger.my_logging - ERROR - Error in get_data_as_dataframe in prediction_pipeline.py
+[2024-09-07 16:17:41,262] 79 src.logger.my_logging - ERROR - Error in get_data_as_dataframe in prediction_pipeline.py
