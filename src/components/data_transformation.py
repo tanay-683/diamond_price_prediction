@@ -1,9 +1,5 @@
 import pandas as pd
 import numpy as np
-from src.logger.my_logging import get_logger
-from src.exception.exception import customException
-from src.utils.utils import save_object
-
 import os
 import sys
 from dataclasses import dataclass
@@ -11,6 +7,12 @@ from pathlib import Path
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import OrdinalEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.pipeline import Pipeline
+
+from src.logger.my_logging import get_logger
+from src.exception.exception import customException
+from src.utils.utils import save_object
 
 
 logger = get_logger()
@@ -91,8 +93,8 @@ class DataTransformation:
             test_df = pd.read_csv(test_path)
 
             logger.info("Reading train and test data complete")
-            logger.info(f"Train Dataframe head :\n{train_df.head(3).to_string()}")
-            logger.info(f"Test Dataframe head :\n{test_df.head(3).to_string()}")
+            logger.info(f"Train Dataframe head :\n{train_df.head(3).to_string()}\n\n")
+            logger.info(f"Test Dataframe head :\n{test_df.head(3).to_string()}\n\n")
 
             preprocessor_obj = self.get_data_transform()
 
@@ -114,10 +116,10 @@ class DataTransformation:
 
             logger.info("Applying preprocessor object on training and testing datasets")
 
-            train_arr = np.concatenate[
+            train_arr = np.c_[
                 transformed_input_feature_train_df, np.array(target_feature_train_df)
             ]
-            test_arr = np.concatenate[
+            test_arr = np.c_[
                 transformed_input_feature_test_df, np.array(target_feature_test_df)
             ]
 
@@ -126,9 +128,8 @@ class DataTransformation:
                 obj=preprocessor_obj,
             )
 
-            logger.info("preprocessing pickle file saved")
+            logger.info("preprocessing pickle file saved\n\n")
 
             return (train_arr, test_arr)
         except Exception as e:
-            my_logging.info()
             raise customException(e, sys)

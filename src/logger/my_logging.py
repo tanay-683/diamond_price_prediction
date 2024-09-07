@@ -28,7 +28,7 @@ file_handler.setFormatter(formatter)
 # Add the file handler to the logger
 logger.addHandler(file_handler)
 
-# Optional: Also log to console
+# # Optional: Also log to console
 # console_handler = logging.StreamHandler()
 # console_handler.setFormatter(formatter)
 # logger.addHandler(console_handler)

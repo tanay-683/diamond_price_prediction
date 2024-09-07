@@ -1,10 +1,12 @@
 import os
 import sys
 import pickle
-from src.logger.my_logging import my_logging
-from src.exception.exception import customexception
-
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
+
+from src.logger.my_logging import get_logger
+from src.exception.exception import customException
+
+logger = get_logger()
 
 
 def save_object(file_path, obj):
@@ -17,7 +19,7 @@ def save_object(file_path, obj):
             pickle.dump(obj, file_obj)
 
     except Exception as e:
-        raise customexception(e, sys)
+        raise customException(e, sys)
 
 
 def evaluate_model(X_train, y_train, X_test, y_test, models):
@@ -40,8 +42,8 @@ def evaluate_model(X_train, y_train, X_test, y_test, models):
         return report
 
     except Exception as e:
-        my_logging.info("Exception occured during model training")
-        raise customexception(e, sys)
+        logger.info("Exception occured during model training")
+        raise customException(e, sys)
 
 
 def load_object(file_path):
@@ -49,5 +51,5 @@ def load_object(file_path):
         with open(file_path, "rb") as file_obj:
             return pickle.load(file_obj)
     except Exception as e:
-        my_logging.info("Exception Occured in load_object function utils")
-        raise customexception(e, sys)
+        logger.info("Exception Occured in load_object function utils")
+        raise customException(e, sys)

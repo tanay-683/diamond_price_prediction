@@ -1,5 +1,0 @@
-[2024-09-06 14:28:38,003] 30 src.logger.my_logging - INFO - Data Ingestion Started
-[2024-09-06 14:28:38,166] 34 src.logger.my_logging - INFO - Reading a DataFrame
-[2024-09-06 14:28:39,165] 41 src.logger.my_logging - INFO - Performing train_test_split
-[2024-09-06 14:28:39,193] 44 src.logger.my_logging - INFO - Data splitting completed
-[2024-09-06 14:28:40,196] 50 src.logger.my_logging - INFO - Data Ingestion Completed

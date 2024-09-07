@@ -62,7 +62,7 @@ class ModelTrainer:
             print(
                 "\n====================================================================================\n"
             )
-            logging.info(
+            logger.info(
                 f"Best Model Found , Model Name : {best_model_name} , R2 Score : {best_model_score}"
             )
 
@@ -72,5 +72,7 @@ class ModelTrainer:
             )
 
         except Exception as e:
-            my_logging.info()
+            # logger.info()
+            raise customException(e, sys)
+            raise customException(e, sys)
             raise customException(e, sys)
