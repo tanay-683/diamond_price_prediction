@@ -96,7 +96,7 @@ class DataTransformation:
             logger.info(f"Train Dataframe head :\n{train_df.head(3).to_string()}\n\n")
             logger.info(f"Test Dataframe head :\n{test_df.head(3).to_string()}\n\n")
 
-            preprocessor_obj = self.get_data_transform()
+            preprocessor_obj = self.get_data_transform() # Column Transformer class object
 
             target_variable = "price"
             columns_todrop = [target_variable, "id"]

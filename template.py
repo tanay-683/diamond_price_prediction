@@ -44,7 +44,9 @@ list_of_files = [
     "pyproject.toml",
     "tox.ini",
     "experiment/experiment.ipynb", # for some experiments
-    
+    "app.py", # this file will contain the flask app
+    "templates/index.html", # this file will contain the html code for the home page
+    ".gitignore", # this file will contain the files and folders that should be ignored by git
 ]
 
 
