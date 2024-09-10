@@ -119,3 +119,15 @@ by running this above command, you can see the mlflow ui in your browser and you
 
 
 
+
+
+
+
+<div style="padding : 5px;margin-bottom: 2rem ;border:2px solid rgb(167, 153, 240); border-radius :0.5rem">
+<span style="margin-bottom:1rem;border-bottom: 3px solid rgb(167, 153, 240); border-radius :0.1rem">Note</span>
+<br>
+<br>
+<b>http://... or https://...</b> indicates that the tracking server is accessible over a network using HTTP.
+<b>databricks</b> indicates integration with Databricks.
+**file://**``... indicates that the data is stored locally on the file system.
+</div>

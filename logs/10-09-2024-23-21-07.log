@@ -1,0 +1,33 @@
+[2024-09-10 23:21:08,624] 20 src.logger.my_logging - INFO - evaluation started !!!
+[2024-09-10 23:21:08,624] 29 src.logger.my_logging - INFO - Data Ingestion Started
+[2024-09-10 23:21:08,624] 30 src.logger.my_logging - INFO - Data Ingestion Started
+[2024-09-10 23:21:08,780] 33 src.logger.my_logging - INFO - Reading a DataFrame
+[2024-09-10 23:21:09,743] 40 src.logger.my_logging - INFO - Performing train_test_split
+[2024-09-10 23:21:09,766] 42 src.logger.my_logging - INFO - Data splitting completed
+[2024-09-10 23:21:10,734] 47 src.logger.my_logging - INFO - Data Ingestion Completed
+[2024-09-10 23:21:10,895] 95 src.logger.my_logging - INFO - Reading train and test data complete
+[2024-09-10 23:21:10,899] 96 src.logger.my_logging - INFO - Train Dataframe head :
+       id  carat        cut color clarity  depth  table     x     y     z  price
+0  192685   1.50       Good     E     SI2   64.1   61.0  7.17  7.12  4.59   6300
+1  162976   0.32    Premium     H     SI1   61.6   59.0  4.43  4.38  2.71    559
+2   48518   0.41  Very Good     I    VVS2   60.1   61.0  4.76  4.83  2.89    773
+
+
+[2024-09-10 23:21:10,901] 97 src.logger.my_logging - INFO - Test Dataframe head :
+       id  carat        cut color clarity  depth  table     x     y     z  price
+0  178686   0.30    Premium     E      IF   62.6   58.0  4.27  4.24  2.66    944
+1   46601   1.01    Premium     G     VS2   60.6   60.0  6.55  6.49  3.94   5899
+2   80866   1.61  Very Good     G     VS2   63.4   55.0  7.40  7.44  4.71  13205
+
+
+[2024-09-10 23:21:10,901] 31 src.logger.my_logging - INFO - Stating Data Transformation
+[2024-09-10 23:21:10,901] 49 src.logger.my_logging - INFO - Pipeline Initiated
+[2024-09-10 23:21:11,222] 117 src.logger.my_logging - INFO - Applying preprocessor object on training and testing datasets
+[2024-09-10 23:21:11,231] 131 src.logger.my_logging - INFO - preprocessing pickle file saved
+
+
+[2024-09-10 23:21:11,235] 29 src.logger.my_logging - INFO - Splitting dependent and independent variables
+[2024-09-10 23:21:11,714] 49 src.logger.my_logging - INFO - Model Report: {'LinearRegression': 0.9370125524534548, 'Lasso': 0.9370067817592201, 'Ridge': 0.9370121452073911, 'Elasticnet': 0.8555574973380426}
+[2024-09-10 23:21:11,715] 65 src.logger.my_logging - INFO - Best Model Found , Model Name : LinearRegression , R2 Score : 0.9370125524534548
+[2024-09-10 23:21:11,841] 26 src.logger.my_logging - INFO - evaluation metrics captured
+[2024-09-10 23:21:11,846] 66 src.logger.my_logging - ERROR - Error occured in initiate_model_evaluation method

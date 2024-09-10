@@ -30,15 +30,16 @@ class ModelEvaluation:
         try:
             x_test, y_test = test_data[:,:-1], test_data[:,-1]
             # load the model
-            model_path = os.path.join("artifacts", "model.pkl")
+            model_path = os.path.join("artifact", "model.pkl")
             model = load_object(model_path)
 
 
-            # mlflow.set_registry_uri("")# demands path where your model will be saved, can be a cloud location or local
+            # mlflow.set_registry_uri("")# demands path where your model will be saved, can be a cloud location
 
+            # if we have set the cloud location above then in that case you wont get "file" here
             tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
 
-            print(tracking_url_type_store)
+            print(f"tracking_url_type_store : {tracking_url_type_store}")
 
             # start the mlflow server
             with mlflow.start_run():
@@ -51,6 +52,13 @@ class ModelEvaluation:
                 mlflow.log_metric("rmse", rmse)
                 mlflow.log_metric("r2", r2)
                 mlflow.log_metric("mae", mae)
+
+
+                if tracking_url_type_store != "file":
+                    # mlflow.sklearn.log_model(model,artifact_path="artifacts") # you can give a path to cloud/server
+                    pass
+                else:
+                    mlflow.sklearn.log_model(model,artifact_path="artifacts")
 
 
         except Exception as e:

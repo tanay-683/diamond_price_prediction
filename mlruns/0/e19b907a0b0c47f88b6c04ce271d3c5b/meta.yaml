@@ -1,0 +1,15 @@
+artifact_uri: file:///home/tanay/mlops/mlruns/0/e19b907a0b0c47f88b6c04ce271d3c5b/artifacts
+end_time: 1725994495167
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e19b907a0b0c47f88b6c04ce271d3c5b
+run_name: gregarious-perch-771
+run_uuid: e19b907a0b0c47f88b6c04ce271d3c5b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725994492044
+status: 3
+tags: []
+user_id: tanay

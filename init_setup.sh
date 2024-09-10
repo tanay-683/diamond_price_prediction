@@ -1,7 +1,7 @@
 echo [$(date)]: "START"
 
 
-echo [$(date)]: "creating env with python 3.8 version" 
+echo [$(date)]: "creating env with python 3.10 version" 
 
 python3 -m venv env
 

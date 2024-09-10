@@ -17,7 +17,7 @@ logger = get_logger()  # for logging
 
 class ModelTrainerConfig:
 
-    trained_model_file_path = os.path.join("artifacts", "model.pkl")
+    trained_model_file_path = os.path.join("artifact", "model.pkl")
 
 
 class ModelTrainer:

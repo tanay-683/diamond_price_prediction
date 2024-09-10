@@ -1,0 +1,32 @@
+[2024-09-11 00:24:48,836] 20 src.logger.my_logging - INFO - evaluation started !!!
+[2024-09-11 00:24:48,836] 29 src.logger.my_logging - INFO - Data Ingestion Started
+[2024-09-11 00:24:48,836] 30 src.logger.my_logging - INFO - Data Ingestion Started
+[2024-09-11 00:24:48,995] 33 src.logger.my_logging - INFO - Reading a DataFrame
+[2024-09-11 00:24:49,959] 40 src.logger.my_logging - INFO - Performing train_test_split
+[2024-09-11 00:24:49,983] 42 src.logger.my_logging - INFO - Data splitting completed
+[2024-09-11 00:24:50,956] 47 src.logger.my_logging - INFO - Data Ingestion Completed
+[2024-09-11 00:24:51,119] 95 src.logger.my_logging - INFO - Reading train and test data complete
+[2024-09-11 00:24:51,123] 96 src.logger.my_logging - INFO - Train Dataframe head :
+       id  carat    cut color clarity  depth  table     x     y     z  price
+0  182972   0.51  Ideal     G     VS2   62.4   53.0  5.08  5.10  3.18   1419
+1  117815   0.30  Ideal     D     SI1   62.5   57.0  4.30  4.26  2.67    709
+2   48137   0.35  Ideal     J     VS1   62.5   54.0  4.51  4.55  2.83    527
+
+
+[2024-09-11 00:24:51,126] 97 src.logger.my_logging - INFO - Test Dataframe head :
+       id  carat        cut color clarity  depth  table     x     y     z  price
+0  167046   2.01  Very Good     E     SI2   63.4   54.0  8.03  8.07  5.11  13052
+1   31630   0.36  Very Good     F     VS2   62.6   62.0  4.54  4.56  2.85    616
+2  155075   0.75  Very Good     F     SI1   62.0   60.0  5.82  5.80  3.61   2838
+
+
+[2024-09-11 00:24:51,126] 31 src.logger.my_logging - INFO - Stating Data Transformation
+[2024-09-11 00:24:51,126] 49 src.logger.my_logging - INFO - Pipeline Initiated
+[2024-09-11 00:24:51,452] 117 src.logger.my_logging - INFO - Applying preprocessor object on training and testing datasets
+[2024-09-11 00:24:51,461] 131 src.logger.my_logging - INFO - preprocessing pickle file saved
+
+
+[2024-09-11 00:24:51,466] 29 src.logger.my_logging - INFO - Splitting dependent and independent variables
+[2024-09-11 00:24:51,938] 49 src.logger.my_logging - INFO - Model Report: {'LinearRegression': 0.9365356439884096, 'Lasso': 0.9365598475280799, 'Ridge': 0.9365356916418149, 'Elasticnet': 0.8559352366112527}
+[2024-09-11 00:24:51,938] 65 src.logger.my_logging - INFO - Best Model Found , Model Name : Lasso , R2 Score : 0.9365598475280799
+[2024-09-11 00:24:52,061] 26 src.logger.my_logging - INFO - evaluation metrics captured

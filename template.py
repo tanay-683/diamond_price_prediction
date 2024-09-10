@@ -13,7 +13,6 @@ list_of_files = [
     ".github/workflows/ci.yaml",
     "src/__init__.py", #src folder will represent the source code of the project, other infrastructure code will be outside of this folder
 
-
     # a pipeline contain various components and all those components will be in the components folder
     "src/components/__init__.py",
     "src/components/data_ingestion.py",
@@ -27,15 +26,21 @@ list_of_files = [
 
     "src/utils/__init__.py", # utility functions will be in the utils
     "src/utils/utils.py",
+
     "src/logger/logging.py",
+    "src/logger/__init__.py",
+
     "src/exception/exception.py",
+    "src/exception/__init__.py",
 
 
     # Testing folder
     "tests/unit/__init__.py",
     "tests/unit/unit.py",
+
     "tests/integration/__init__.py",
     "tests/integration/int.py",
+
     "init_setup.sh",  # this file will contain the commands to setup the project like creating a virtual environment, installing the dependencies, etc.
     "requirements.txt",
     "requirements_dev.txt", # when i have to install requirements relataed to the development I'll run this file
